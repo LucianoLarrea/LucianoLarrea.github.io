@@ -1,31 +1,66 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>My Portfolio</title>
+  <style>
+    /* Estilos adicionales para mejorar la visualización en móviles */
+    body {
+      font-size: 16px; /* Tamaño de fuente base */
+    }
+    .container {
+      padding: 0 15px; /* Espaciado lateral */
+    }
+    .Portfolio-row {
+      display: flex;
+      flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+      justify-content: center; /* Centrar los elementos */
+    }
+    .Portfolio-row-box {
+      flex: 1 1 100%; /* Ocupa el 100% en móviles */
+      max-width: 300px; /* Ancho máximo para cada proyecto */
+      margin: 10px; /* Espaciado entre proyectos */
+    }
+    @media (min-width: 768px) {
+      .Portfolio-row-box {
+        flex: 1 1 45%; /* Dos columnas en pantallas más grandes */
+      }
+    }
+    @media (min-width: 992px) {
+      .Portfolio-row-box {
+        flex: 1 1 30%; /* Tres columnas en pantallas grandes */
+      }
+    }
+  </style>
+  <title>Mi Portfolio</title>
 </head>
 <body>
 
   <header id="mainheader">
     <nav id="navbar">
       <div class="container">
-        
-        <ul>
-          <li><a href="#mainheader">Home</a></li>
-          <li><a href="#Portfolio">Portfolio</a></li>
-          <li><a href="#About">About Me</a></li>
-          <li><a class="contact-square btn btn-light" href="#contact">Contact Me</a></li>
+        <ul style="list-style-type: none; padding: 0; display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; gap: 15px;">
+            <li><a href="#mainheader">Inicio</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#About">Sobre Mí</a></li>
+          </div>
+          <div style="display: flex; gap: 15px;">
+            <li><a class="contact-square btn btn-light" href="https://www.linkedin.com/in/takticflow/">LinkedIn</a></li>
+            <li><a class="contact-square btn btn-light" href="https://www.youtube.com/@takticflow">YouTube</a></li>
+            <li><a class="contact-square btn btn-light" href="https://twitter.com/TakticF">Twitter</a></li>
+            <li><a class="contact-square btn btn-light" href="https://wa.me/5492612179519">WhatsApp</a></li>
+            <li><a class="contact-square btn btn-light" href="https://calendly.com/takticflow">Agendar Llamada</a></li>
+          </div>
         </ul>
       </div>
     </nav>
     <div id="showcase">
       <div class="container">
-        <h1 class="display-1">Passionate about<br> Data Science</h1>
-        <p class="large"><b>Data Scientist | Data Analyst</b></p>
+        <h1 class="display-1">Apasionado por la Ciencia de Datos e Inteligencia Artificial</h1>
+        <p class="large"><b>Ingeniero en IA | Científico de Datos | MBA | Especialista en Procesos de Negocio</b></p>
         <div class="showcase-row-box">
           <img src="img/about.png" alt="">
         </div>
@@ -35,81 +70,76 @@
 
   <section id="Portfolio">
     <div class="container">
-      <h2>Portfolio</h2>
+      <h2>Proyectos de Ciencia de Datos</h2>
       <div class="Portfolio-row">
-        <!-- DASHBOARDS -->
-        <div class="Portfolio-row-box">
-          <a href="https://www.novypro.com/profile_projects/jospinoponce" target="_blank">
-          <img src="img/data.png"  alt="" /></a>
-          
-          <p><b>Dashboards:<br></b> Generación de Dashboards para visualización de datos en la comunidad 
-          <a href="https://www.novypro.com/profile_projects/jospinoponce" target="_blank"><b>NovyPro.</b></a></p>
-        </div>
         <!-- PROYECTO 1 -->
         <div class="Portfolio-row-box">
           <a href="https://github.com/francomyburg/Proyecto_grupal_DS" target="_blank">
           <img src="img/taxi.png"  alt="" /></a>
           
-          <p><b>Análisis de viabilidad para incorporar vehículos eléctricos al
-            servicio de taxis en  Nueva York:</b><br> 
-            Análisis de datos y desarollo de modelo ML forecasting al sector de transporte público de autos 
-            para invertir con taxis eléctricos... <br>
+          <p><b>Análisis de factibilidad para la incorporación de vehículos eléctricos al servicio de taxis en Nueva York:</b>
+            <br> Análisis de datos y desarrollo de modelo de pronóstico de ML para que el sector del transporte público invierta en taxis eléctricos. <br>
             ▶️<a href="https://github.com/francomyburg/Proyecto_grupal_DS" target="_blank"><b>Repositorio</b></a></p>
+            ▶️<a href="https://www.youtube.com/watch?v=ewDlLPiMFlo" target="_blank"><b>Video</b></a></p>
+            ▶️<a href="https://app.powerbi.com/view?r=eyJrIjoiNTI3MDA2YWMtZGU1Mi00N2Q5LWI2ZmEtNDA0Y2M4YWIyZGE5IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank"><b>Dashboard</b></a></p>
+
         </div>
 
         <!-- PROYECTO 2 -->
         <div class="Portfolio-row-box">
-          <a href="https://github.com/jospinoponce/ModeloRecomiendaPeliculas" target="_blank">
+          <a href="https://github.com/LucianoLarrea/PI_ML_OPS" target="_blank">
           <img src="img/movie.png"  alt="" /></a>
-          <p><b>Sistema Recomendador de Películas:</b><br> Desarrollo de modelo de machine learning que
-          recomienda películas y series a usuarios de plataformas de streaming como netflix,
-          amazon entre otros...<br>
-          ▶️<a href="https://github.com/jospinoponce/ModeloRecomiendaPeliculas" target="_blank"><b>Repositorio</b></a></p>
-        </div>
-        <!-- PROYECTO 3 -->
-        <div class="Portfolio-row-box">
-          <a href="https://github.com/jospinoponce/AnalisisDeMercadoSP500" target="_blank">
-          <img src="img/sp500.png"  alt="" /></a>
-          <p><b>Análisis al Mercado Bursatíl compañias index SP500: <br> </b>
-          Análisis de datos a la situación del mercado bursátil de los últimos 20 años 
-          para seleccionar con modelo ML compañias potencialmente rentables...<br>
-          ▶️<a href="https://github.com/jospinoponce/AnalisisDeMercadoSP500"  target="_blank"><b>Repositorio </b></a></p>  
+          <p><b>Sistema de Recomendación para Servicios de Streaming:</b><br> Desarrollo de un modelo de Machine Learning que recomienda películas y series a usuarios de plataformas de streaming como Netflix, Amazon entre otras.<br>
+          ▶️<a href="https://github.com/LucianoLarrea/PI_ML_OPS" target="_blank"><b>Repositorio</b></a></p>
+          ▶️<a href="https://youtu.be/L5ZxSU4dr7w" target="_blank"><b>Video</b></a></p>
         </div>
         
-                
-      </div>
-
-      <div class="Portfolio-row">
+        <!-- PROYECTO 3 -->
+        <div class="Portfolio-row-box">
+          <a href="https://github.com/LucianoLarrea/PI2_DA" target="_blank">
+          <img src="img/sp500.png"  alt="" /></a>
+          <p><b>Análisis de las empresas del mercado de valores en el índice SP500: <br> </b>
+            Análisis de datos de la situación bursátil de los últimos 20 años para seleccionar empresas potencialmente rentables con un modelo de ML.<br>
+          ▶️<a href="https://github.com/LucianoLarrea/PI2_DA"  target="_blank"><b>Repositorio </b></a></p>  
+          ▶️<a href="https://lucianolarrea-pi2-da-main-ofqe0g.streamlit.app/"  target="_blank"><b>App </b></a></p>  
+        </div>
 
         <!-- PROYECTO 4 -->
         <div class="Portfolio-row-box">
-          <a href="https://github.com/jospinoponce/PruebasSaberPro_Colombia" target="_blank">
-            <img src="img/estu.png"  alt="" /></a>
-          <p><b>Análisis de datos a resultados de pruebas universitarias en Colombia: <br> </b>
-          Desarrollo de un modelo ML que determine las variables más influyentes en el desempeño
-          de los estudiantes universitarios al momento de realizar las pruebas estatales Saber Pro...(en desarollo)<br>
-          ▶️<a href="https://github.com/jospinoponce/PruebasSaberPro_Colombia"  target="_blank"><b>Repositorio </b></a></p> 
-          </div>
-          <!-- PROYECTO 5 -->
+          <a href="https://github.com/LucianoLarrea/LifeExpectancy" target="_blank">
+          <img src="https://raw.githubusercontent.com/LucianoLarrea/LifeExpectancy/main/LifeExpectancy_files/figure-html/grafico_continentes-1.png"  alt="Life Expectancy" /></a>
+          <p><b>Análisis de la Esperanza de Vida alrededor del mundo <br> </b>
+            Análisis de datos de la Esperanza de Vida alrededor del mundo utilizando R y datasets de TidyTuesday.<br>
+          ▶️<a href="https://github.com/LucianoLarrea/LifeExpectancy"  target="_blank"><b>Repositorio </b></a></p>  
+          ▶️<a href="https://takticflow.quarto.pub/lifeexpectancy/"  target="_blank"><b>App </b></a></p>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="AI-Projects">
+    <div class="container">
+      <h2>Proyectos Agénticos de IA</h2>
+      <div class="Portfolio-row">
+        <!-- PROYECTO 5 -->
         <div class="Portfolio-row-box">
-          <a href="https://github.com/jospinoponce/webScrapingGreenSkillsJobs" target="_blank">
-            <img src="img/greenskills..png"  alt="" /></a>
-          <p><b> Web Scraping Digital Green Skills Jobs: <br> </b>
-          Extracción, análisis y disponibilización de los datos referentes a los trabajos postulados en la web 
-          que requieran habilidades digitales verdes ... (en desarollo)<br>
-          ▶️<a href="https://github.com/jospinoponce/webScrapingGreenSkillsJobs"  target="_blank"><b>Repositorio </b></a></p>
-          </div>
+          <a href="https://github.com/LucianoLarrea/Generate_README" target="_blank">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240702120959/Readme1.png" alt="Generación de README" style="max-width: 100%; height: auto;" /></a>
+          <p><b>Generar archivo README con Agentes de IA <br> </b>
+            Desarrollo de agentes de IA que generan un archivo README para un repositorio de GitHub utilizando el framework CrewAI.<br>
+          ▶️<a href="https://github.com/LucianoLarrea/Generate_README" target="_blank"><b>Repositorio</b></a></p>  
+        </div>
+
         <!-- PROYECTO 6 -->
         <div class="Portfolio-row-box">
-          <img src="img/icon-1.png" alt="">
-          <p><b> <br> </b>
-          </p>
-          </div>  
+          <a href="https://github.com/LucianoLarrea/Resume_Optimization" target="_blank">
+          <img src="https://raw.githubusercontent.com/LucianoLarrea/Resume_Optimization/main/docs/AI-Agent.png" alt="Optimización de Curriculum" style="max-width: 100%; height: auto;" /></a>
+          <p><b>Optimización de Currículum con Agentes de IA <br> </b>
+          Optimización de Currículum con CrewAI es una herramienta impulsada por IA que optimiza tu currículum para aplicaciones de empleo específicas utilizando múltiples agentes de IA.<br>
+          ▶️<a href="https://github.com/LucianoLarrea/Resume_Optimization" target="_blank"><b>Repositorio</b></a></p>  
+        </div>
       </div>
-
     </div>
-    
-    
   </section>
 
   <section id="About">
@@ -117,53 +147,46 @@
       <div class="About-row">
         
         <div class="About-row-box">
-          <h2>About Me</h2>
-          <p>Hello, I am a Data Scientist with a background in engineering and master's degrees in business administration and strategic information management.
-            I have experience in project management following the PMI and Lean Management methodology. I have knowledge of Agile methodologies such as Scrum and Kanban. <br><br>
+          <h2>Sobre Mí</h2>
+          <p>Hola, soy un Científico de Datos con formación en ingeniería y maestrías en administración de empresas y gestión estratégica de la información.
+            
+            Tengo experiencia en gestión de proyectos siguiendo la metodología PMI y Lean Management. Poseo conocimiento de metodologías ágiles como Scrum y Kanban. <br><br>
+            
+            Mi experiencia en mejora de procesos de negocio me ha dotado de habilidades excepcionales, incluyendo una visión holística de los procesos, pensamiento sistémico y planificación estratégica. A lo largo de mi trayectoria, he liderado equipos en empresas de desarrollo de proyectos energéticos, lo que me ha brindado un profundo entendimiento del negocio y me ha ayudado a desarrollar habilidades en trabajo colaborativo en equipo y liderazgo, coordinando eficazmente con múltiples contratistas y proveedores. <br><br>
+          
+          <b>Mi objetivo profesional es seguir creciendo en el campo de la ciencia de datos y la ingeniería de IA, contribuyendo a proyectos que permitan a las organizaciones alcanzar un alto desempeño mediante la implementación de modelos de Machine Learning e Inteligencia Artificial.</b> <br><br>
   
-  
-            My previous experience in business process improvement has given me exceptional skills, such as a holistic vision of processes, systemic thinking and strategic planning.
-            My experience as a team leader in energy project development companies has allowed me to get to know the business, develop skills such as collaborative teamwork and leadership working together with multiple contractors and suppliers.. <br><br>
-  
-  
-            <b>My work objective is to continue growing professionally in the area of data science and participating in projects that allow organizations to achieve high performance through the implementation of Machine Learning and Artificial Intelligence models.</b> <br><br>
-  
-            If you are looking for someone with my skills and experience, please contact me at takticflow@gmail.com.</p>
+            Si estás buscando a alguien con mis habilidades y experiencia, por favor contáctame a takticflow@gmail.com o <a href="https://calendly.com/takticflow" target="_blank">agenda una reunión</a> o <a href="https://wa.me/5492612179519" target="_blank">contáctame por WhatsApp</a>.</p>
         </div>
       </div>
       
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <h6>Get In Touch!</h6>
-        <h2>Contact Me</h2>
-        <form action="">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="name">Email</label>
-            <input class="form-control" type="email">
-          </div>
-          <div class="form-group">
-            <label for="name">Message</label>
-            <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
-          </div>
-          <button class="btn btn-dark">Send</button>
-        </form>
-      </div>
-    </div>
-  </section>
+
 
   <section id="mainfooter">
     <div class="container">
-      
+      <footer style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; gap: 15px;">
+          <a href="#mainheader">Inicio</a>
+          <a href="#Portfolio">Portfolio</a>
+          <a href="#About">Sobre Mí</a>
+        </div>
+        <div style="display: flex; gap: 15px;">
+          <a class="contact-square btn btn-light" href="https://www.linkedin.com/in/takticflow/">LinkedIn</a>
+          <a class="contact-square btn btn-light" href="https://www.youtube.com/@takticflow">YouTube</a>
+          <a class="contact-square btn btn-light" href="https://twitter.com/TakticF">Twitter</a>
+          <a class="contact-square btn btn-light" href="https://wa.me/5492612179519">WhatsApp</a>
+          <a class="contact-square btn btn-light" href="https://calendly.com/takticflow">Agendar Llamada</a>
+        </div>
+      </footer>
     </div>
   </section>
+  <!-- Botpress Webchat Scripts -->
   
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/03/05/13/20250305130950-I024HGGW.js"></script>
+      
 </body>
 </html>
